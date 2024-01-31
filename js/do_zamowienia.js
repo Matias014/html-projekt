@@ -37,8 +37,8 @@ function obsluzFormularz() {
     wyswietlZamowienie(zamowienie);
 }
 
-function wyswietlZamowienie(order) {
-    let podsumowanie = `Podsumowanie zamówienia:\n${JSON.stringify(order, null, 2)}`;
+function wyswietlZamowienie(temp) {
+    const podsumowanie = "Podsumowanie zamówienia: \n" + JSON.stringify(temp, null, 2);
     alert(podsumowanie);
 }
 
