@@ -35,73 +35,78 @@
 
     <main>
         <div class="container">
-            <h2>Składanie zamówienia</h2>
-            <form action="#" id="formularz-zamowienia">
-                <label for="imie">Imię:</label>
-                <input type="text" id="imie" name="imie" required autofocus pattern="[a-zA-Z]+"
-                    title="Wpisz poprawne imię.">
+            <section>
+                <h2>Składanie zamówienia</h2>
+                <form action="#" id="formularz-zamowienia">
+                    <label for="imie">Imię:</label>
+                    <input type="text" id="imie" name="imie" required autofocus pattern="[a-zA-Z]+"
+                        title="Wpisz poprawne imię.">
 
-                <label for="nazwisko">Nazwisko:</label>
-                <input type="text" id="nazwisko" name="nazwisko" required pattern="[a-zA-Z]+"
-                    title="Wpisz poprawne nazwisko.">
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" id="nazwisko" name="nazwisko" required pattern="[a-zA-Z]+"
+                        title="Wpisz poprawne nazwisko.">
 
-                <label for="email">Adres e-mail:</label>
-                <input type="email" id="email" name="email" required title="Wpisz adres e-mail.">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" required title="Wpisz adres e-mail.">
 
-                <label for="miasto">Miasto:</label>
-                <input type="text" id="miasto" name="miasto" required pattern="[a-zA-Z]+" title="Wpisz poprawne miasto.">
+                    <label for="miasto">Miasto:</label>
+                    <input type="text" id="miasto" name="miasto" required pattern="[a-zA-Z]+"
+                        title="Wpisz poprawne miasto.">
 
-                <label for="kod-pocztowy">Kod pocztowy:</label>
-                <input type="text" id="kod-pocztowy" name="kod-pocztowy" required pattern="\d{2}-\d{3}"
-                    title="Wpisz poprawny kod pocztowy (np. 00-000).">
+                    <label for="kod-pocztowy">Kod pocztowy:</label>
+                    <input type="text" id="kod-pocztowy" name="kod-pocztowy" required pattern="\d{2}-\d{3}"
+                        title="Wpisz poprawny kod pocztowy (np. 00-000).">
 
-                <label for="ulica">Ulica:</label>
-                <input type="text" id="ulica" name="ulica" required pattern="[a-zA-Z]+" title="Wpisz poprawną ulicę.">
+                    <label for="ulica">Ulica:</label>
+                    <input type="text" id="ulica" name="ulica" required pattern="[a-zA-Z]+"
+                        title="Wpisz poprawną ulicę.">
 
-                <label for="nr-budynku">Numer budynku/mieszkania:</label>
-                <input type="text" id="nr-budynku" name="nr-budynku" required pattern="\d+[\/]?\d*"
-                    title="Wpisz poprawny nr budynku lub mieszkania mieszkania (np. 10/20).">
+                    <label for="nr-budynku">Numer budynku/mieszkania:</label>
+                    <input type="text" id="nr-budynku" name="nr-budynku" required pattern="\d+[\/]?\d*"
+                        title="Wpisz poprawny nr budynku lub mieszkania mieszkania (np. 10/20).">
 
-                <label for="pieczywo">Wybierz pieczywo:</label>
-                <select id="pieczywo" name="pieczywo">
-                    <optgroup label="Chleby">
-                        <option value="chleb1">chleb1</option>
-                        <option value="chleb2">chleb2</option>
-                        <option value="chleb3">chleb3</option>
-                    </optgroup>
-                    <optgroup label="Bułki">
-                        <option value="bułka1">bułka1</option>
-                        <option value="bułka2">bułka2</option>
-                        <option value="bułka3">bułka3</option>
-                    </optgroup>
-                    <optgroup label="Rogaliki">
-                        <option value="rogalik1">rogalik1</option>
-                        <option value="rogalik2">rogalik2</option>
-                        <option value="rogalik3">rogalik3</option>
-                    </optgroup>
-                    <optgroup label="Bagietki">
-                        <option value="bagietka1">bagietka1</option>
-                        <option value="bagietka1">bagietka2</option>
-                        <option value="bagietka1">bagietka3</option>
-                    </optgroup>
-                </select>
+                    <label for="pieczywo">Wybierz pieczywo:</label>
+                    <select id="pieczywo" name="pieczywo">
+                        <optgroup label="Chleby">
+                            <option value="chleb1">chleb1</option>
+                            <option value="chleb2">chleb2</option>
+                            <option value="chleb3">chleb3</option>
+                        </optgroup>
+                        <optgroup label="Bułki">
+                            <option value="bułka1">bułka1</option>
+                            <option value="bułka2">bułka2</option>
+                            <option value="bułka3">bułka3</option>
+                        </optgroup>
+                        <optgroup label="Rogaliki">
+                            <option value="rogalik1">rogalik1</option>
+                            <option value="rogalik2">rogalik2</option>
+                            <option value="rogalik3">rogalik3</option>
+                        </optgroup>
+                        <optgroup label="Bagietki">
+                            <option value="bagietka1">bagietka1</option>
+                            <option value="bagietka1">bagietka2</option>
+                            <option value="bagietka1">bagietka3</option>
+                        </optgroup>
+                    </select>
 
-                <label for="ilosc">Ilość:</label>
-                <input type="number" id="ilosc" name="ilosc" min="1" max="100" required title="Wpisz ilość zamówień.">
+                    <label for="ilosc">Ilość:</label>
+                    <input type="number" id="ilosc" name="ilosc" min="1" max="100" required
+                        title="Wpisz ilość zamówień.">
 
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" id="maka-zytnia" name="maka" value="maka-zytnia" checked>
-                        Mąka żytnia
-                    </label>
-                    <label>
-                        <input type="radio" id="maka-pszenna" name="maka" value="maka-pszenna">
-                        Mąka pszenna
-                    </label>
-                </div>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" id="maka-zytnia" name="maka" value="maka-zytnia" checked>
+                            Mąka żytnia
+                        </label>
+                        <label>
+                            <input type="radio" id="maka-pszenna" name="maka" value="maka-pszenna">
+                            Mąka pszenna
+                        </label>
+                    </div>
 
-                <button type="submit">Zamów</button>
-            </form>
+                    <button type="submit">Zamów</button>
+                </form>
+            </section>
         </div>
     </main>
 

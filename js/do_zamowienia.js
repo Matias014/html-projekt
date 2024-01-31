@@ -40,7 +40,7 @@ function wyswietlZamowienie(order) {
     alert(podsumowanie);
 }
 
-//Aplikacja wykorzystuje proste wywołanie asynchroniczne w JavaScript.
+//wywołanie asynchroniczne
 function pobierzLosowyCytat() {
     fetch('https://api.quotable.io/random')
         .then(response => response.json())
