@@ -5,40 +5,42 @@ document.addEventListener('DOMContentLoaded', function () {
     pobierzLosowyCytat();
 });
 
-let czyFormularzWyslany = false;
+function obsluzFormularz() {
+    const imie = document.getElementById("imie").value;
+    const nazwisko = document.getElementById("nazwisko").value;
+    const email = document.getElementById("email").value;
+    const miasto = document.getElementById("miasto").value;
+    const kodPocztowy = document.getElementById("kod-pocztowy").value;
+    const ulica = document.getElementById("ulica").value;
+    const numer = document.getElementById("nr-budynku").value;
+    const pieczywo = document.getElementById("pieczywo").value;
+    const ilosc = document.getElementById("ilosc").value;
+    const maka = document.querySelector("input[name='maka']:checked").value;
 
-function obsluzFormularz(event) {
-    if (!czyFormularzWyslany) {
-        event.preventDefault();
+    //json
+    const zamowienie = {
+        "imie": imie,
+        "nazwisko": nazwisko,
+        "email": email,
+        "miasto": miasto,
+        "kodPocztowy": kodPocztowy,
+        "ulica": ulica,
+        "numer": numer,
+        "pieczywo": pieczywo,
+        "ilosc": ilosc,
+        "maka": maka
+    };
 
-        const imieNazwisko = document.getElementById("imie-nazwisko").value;
-        const email = document.getElementById("email").value;
-        const adresDostawy = document.getElementById("adres-dostawy").value;
-        const pieczywo = document.getElementById("pieczywo").value;
-        const ilosc = document.getElementById("ilosc").value;
-        const maka = document.querySelector("input[name='maka']:checked").value;
-
-        const zamowienie = {
-            "imie-nazwisko": imieNazwisko,
-            "email": email,
-            "adres-dostawy": adresDostawy,
-            "pieczywo": pieczywo,
-            "ilosc": ilosc,
-            "maka": maka
-        };
-
-        wyswietlZamowienie(zamowienie);
-    }
+    //przetworzenie formularza
+    wyswietlZamowienie(zamowienie);
 }
 
 function wyswietlZamowienie(order) {
-    let podsumowanie = `Podsumowanie zamówienia:\n${order["imie-nazwisko"]}\n${order.email}\n${order["adres-dostawy"]}\n${order.pieczywo} x ${order.ilosc}\nMąka: ${order.maka}`;
+    let podsumowanie = `Podsumowanie zamówienia:\n${JSON.stringify(order, null, 2)}`;
     alert(podsumowanie);
-
-    czyFormularzWyslany = true;
-    document.getElementById("formularz-zamowienia").submit();
 }
 
+//Aplikacja wykorzystuje proste wywołanie asynchroniczne w JavaScript.
 function pobierzLosowyCytat() {
     fetch('https://api.quotable.io/random')
         .then(response => response.json())
@@ -48,6 +50,7 @@ function pobierzLosowyCytat() {
         .catch(error => console.error('Error:', error));
 }
 
+//wykorzystanie DOM
 function wyswietlCytat(cytat) {
     const container = document.querySelector('.container');
 

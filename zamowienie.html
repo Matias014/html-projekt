@@ -37,14 +37,30 @@
         <div class="container">
             <h2>Składanie zamówienia</h2>
             <form action="#" id="formularz-zamowienia">
-                <label for="imie-nazwisko">Imię i nazwisko (wymagane):</label>
-                <input type="text" id="imie-nazwisko" name="imie-nazwisko" required autofocus pattern="[a-zA-Z]+ [a-zA-Z]+" title="Wpisz imię i nazwisko, oddzielając je spacją.">
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie" name="imie" required autofocus pattern="[a-zA-Z]+"
+                    title="Wpisz poprawne imię.">
 
-                <label for="email">Adres e-mail (wymagane):</label>
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko" name="nazwisko" required pattern="[a-zA-Z]+"
+                    title="Wpisz poprawne nazwisko.">
+
+                <label for="email">Adres e-mail:</label>
                 <input type="email" id="email" name="email" required title="Wpisz adres e-mail.">
 
-                <label for="adres-dostawy">Adres dostawy (wymagane):</label>
-                <input type="text" id="adres-dostawy" name="adres-dostawy" required title="Wpisz adres dostawy.">
+                <label for="miasto">Miasto:</label>
+                <input type="text" id="miasto" name="miasto" required pattern="[a-zA-Z]+" title="Wpisz poprawne miasto.">
+
+                <label for="kod-pocztowy">Kod pocztowy:</label>
+                <input type="text" id="kod-pocztowy" name="kod-pocztowy" required pattern="\d{2}-\d{3}"
+                    title="Wpisz poprawny kod pocztowy (np. 00-000).">
+
+                <label for="ulica">Ulica:</label>
+                <input type="text" id="ulica" name="ulica" required pattern="[a-zA-Z]+" title="Wpisz poprawną ulicę.">
+
+                <label for="nr-budynku">Numer budynku/mieszkania:</label>
+                <input type="text" id="nr-budynku" name="nr-budynku" required pattern="\d+[\/]?\d*"
+                    title="Wpisz poprawny nr budynku lub mieszkania mieszkania (np. 10/20).">
 
                 <label for="pieczywo">Wybierz pieczywo:</label>
                 <select id="pieczywo" name="pieczywo">
