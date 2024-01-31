@@ -9,6 +9,7 @@ function obsluzFormularz() {
     const imie = document.getElementById("imie").value;
     const nazwisko = document.getElementById("nazwisko").value;
     const email = document.getElementById("email").value;
+    const telefon = document.getElementById("telefon").value;
     const miasto = document.getElementById("miasto").value;
     const kodPocztowy = document.getElementById("kod-pocztowy").value;
     const ulica = document.getElementById("ulica").value;
@@ -22,6 +23,7 @@ function obsluzFormularz() {
         "imie": imie,
         "nazwisko": nazwisko,
         "email": email,
+        "telefon": telefon,
         "miasto": miasto,
         "kodPocztowy": kodPocztowy,
         "ulica": ulica,
