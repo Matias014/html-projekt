@@ -18,6 +18,7 @@ function obsluzFormularz() {
     const ilosc = document.getElementById("ilosc").value;
     const maka = document.querySelector("input[name='maka']:checked").value;
 
+
     //json
     const zamowienie = {
         "imie": imie,
@@ -33,13 +34,7 @@ function obsluzFormularz() {
         "maka": maka
     };
 
-    //przetworzenie formularza
-    wyswietlZamowienie(zamowienie);
-}
-
-function wyswietlZamowienie(temp) {
-    const podsumowanie = "Podsumowanie zamówienia: \n" + JSON.stringify(temp, null, 2);
-    alert(podsumowanie);
+    alert("Dziękujemy za złożenie zamówienia, " + zamowienie.imie + "!");
 }
 
 //wywołanie asynchroniczne
