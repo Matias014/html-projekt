@@ -10,7 +10,7 @@
     height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 712px) {
 
     .obrazy {
         grid-template-columns: 1fr 1fr;

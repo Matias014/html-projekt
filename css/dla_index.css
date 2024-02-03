@@ -43,7 +43,7 @@
     transform: scale(1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 712px) {
     .container #zdjecie1 {
         float: none;
         display: block;

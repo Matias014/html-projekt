@@ -63,7 +63,7 @@
     height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 712px) {
     .slider {
         max-width: 400px;
         height: 300px;

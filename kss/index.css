@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-<html lang="pl">
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Strona internetowa piekarni - zapraszamy!">
-    <meta name="keywords" content="piekarnia, pieczywo, chleby, bułki, rogaliki, bagietki">
-    <title>Piekarnia - strona główna</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/bread_web_icon.png">
-    <script src="js/burger.js"></script>
-    <script src="js/popup.js"></script>
-</head>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0e2d3;
+}
 
-<body>
+nav {
+    background: #d2a679;
+}
 
-    <nav>
-        <div class="menu">
-            <div class="zdjecie">
-                <img src="img/placeholder.png" alt="logo">
-            </div>
-            <button class="burger-menu">&#9776;</button>
-            <div class="linki">
-                <a href="index.html">Strona Główna</a>
-                <a href="o_nas.html">O nas</a>
-                <a href="galeria.html">Galeria</a>
-                <a href="zamowienie.html">Zamówienia</a>
-                <a href="kontakt.html">Kontakt</a>
-            </div>
-        </div>
-    </nav>
+/*
+    Strona główna - sekcja główna strony piekarnii
 
+    Poniżej jest przedstawiona zawartość kontenera strony głównej.
+
+    **.container**: Kontener o tej klasie ma szerokość 80% ekranu, jest wyśrodkowany, ma pionowe marginesy ustawione na 20px i padding na 20px. Minimalna wysokośc kontenera to 70vh.
+    
+    **#zdjecie1**: Zdjęcia o tym id mają ustawione opływanie z prawej strony.
+    
+    **.obrazy**: Kontener o tej klasie ma ustawienie display:flex, flex-direction: row, flex-wrap: wrap i jest wyśrodkowany.
+    
+    **#zdjecie5**: Zdjęcie o tej klasie ma szerkośc 50%, jest wyświetlany jako blok i jest wyśrodkowany.
+
+    Markup:
     <main>
         <div class="container">
             <section>
@@ -38,8 +36,6 @@
                 <p>Odkryj smak tradycyjnego pieczywa, wypiekanego z pasją i według starych receptur. Nasze chleby, bułki
                     i
                     ciasta są przygotowywane z najlepszych składników - zawsze świeże i pachnące.</p>
-
-
                 <p><img src="img/index/chleb1.jpg" alt="chleb1" id="zdjecie1">Lorem ipsum dolor sit amet, consectetur
                     adipisicing
                     elit.
@@ -113,37 +109,235 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-info">
-            <div class="footer-left">
-                <p>© Piekarnia 2023</p>
-            </div>
-            <div class="footer-right">
-                <p><a href="#">Polityka prywatności</a></p>
-                <div class="socials">
-                    <a href="#"><img src="img/socials/facebook.png" id="fb" alt="link_do_facebooka"></a>
-                    <a href="#"><img src="img/socials/instagram.png" id="inst" alt="link_do_instagrama"></a>
-                    <a href="#"><img src="img/socials/twitter.png" id="tw" alt="link_do_twittera"></a>
-                    <a href="#"><img src="img/socials/youtube.png" id="yt" alt="link_do_youtuba"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    Style guide: 1.0
+*/
 
-</body>
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
 
-</html>
+.menu {
+    display: flex;
+    align-items: center;
+}
 
-<!-- Odnośniki do autorów zdjęć -->
+.zdjecie {
+    flex-grow: 1;
+    text-align: center;
+}
 
-<!-- Obraz <a href="https://pixabay.com/pl/users/tibine-238708/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=399286"> Sabine Schulte</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=399286"> Pixabay</a> -->
+.zdjecie img {
+    width: 200px;
+    height: auto;
+}
 
-<!-- Obraz <a href="https://pixabay.com/pl/users/couleur-1195798/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1510298"> Ilo</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1510298"> Pixabay</a> -->
+.linki {
+    display: flex;
+    flex-grow: 3;
+    background-color: #bd946c;
+}
 
-<!-- Obraz <a href="https://pixabay.com/pl/users/alexas_fotos-686414/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4183225"> Alexa</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4183225"> Pixabay</a> -->
+.linki a {
+    flex: 1;
+    padding: 1.5em;
+    text-align: center;
+    border-left: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
 
-<!-- <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Pixel perfect - Flaticon</a> -->
-<!-- <a href="https://www.flaticon.com/free-icons/tweet" title="tweet icons">Tweet icons created by Freepik - Flaticon</a> -->
-<!-- <a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a> -->
-<!-- <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Laisa Islam Ani - Flaticon</a> -->
-<!-- <a href="https://www.flaticon.com/free-icons/bread" title="bread icons">Bread icons created by Freepik - Flaticon</a> -->
+.linki a:hover {
+    background-color: #b08a61;
+}
+
+.linki a:first-child {
+    border-left: none;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff7e6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    min-height: 70vh;
+}
+
+.container p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #8f5c30;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+.footer-info>p,
+.socials {
+    margin: 0;
+}
+
+.footer-info>.footer-right>p>a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-info>.footer-right>p>a:hover {
+    color: #d2a679;
+}
+
+.socials img {
+    padding: 0 0.5em;
+    vertical-align: middle;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 712px) {
+
+    .zdjecie {
+        order: -1;
+    }
+
+    .menu,
+    .linki {
+        flex-direction: column;
+    }
+
+    .linki {
+        display: none;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .linki a {
+        border-left: none;
+        border-top: 1px solid #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .linki.active {
+        display: flex;
+    }
+
+    .linki a:first-child {
+        border-top: none;
+    }
+
+    .linki.active a {
+        border-left: none;
+    }
+
+    .container img {
+        width: 100%;
+        display: block;
+        margin: 1em auto;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        align-items: center;
+        margin: 0.5em 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+.container section {
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.container img {
+    width: 300px;
+    height: auto;
+    margin-left: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container #zdjecie1 {
+    float: right;
+}
+
+.container #zdjecie5 {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.obrazy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.obrazy img {
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.obrazy img:hover {
+    transform: scale(1.10);
+}
+
+.obrazy img:not(:hover) {
+    transform: scale(1);
+}
+
+@media (max-width: 712px) {
+    .container #zdjecie1 {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .container #zdjecie5 {
+        width: 100%;
+    }
+
+    .obrazy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .obrazy img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
