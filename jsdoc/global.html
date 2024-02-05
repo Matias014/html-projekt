@@ -104,6 +104,94 @@
     
 
     
+    <h4 class="name" id="dodajZamowienieDoTabeli"><span class="type-signature"></span>dodajZamowienieDoTabeli<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Funkcja dodająca ostatnie zamówienie z tablicy zamówień do tabeli na stronie.Iteruje przez tablicę zamówień i dodaje nowy wiersz do tabeli dla każdego zamówienia.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="do_zamowienia.js.html">do_zamowienia.js</a>, <a href="do_zamowienia.js.html#line69">line 69</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="kliknij"><span class="type-signature"></span>kliknij<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
@@ -368,6 +456,143 @@
     
 
     
+    <h4 class="name" id="obsluzFormularz"><span class="type-signature"></span>obsluzFormularz<span class="signature">(e)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Funkcja obsługująca zdarzenie wysłania formularza. Zapobiega domyślnej akcji przeglądarki,zbiera dane z formularza, tworzy obiekt zamówienia, dodaje go do tablicy zamówień,aktualizuje tabelę zamówień na stronie i wyświetla powiadomienie.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Obiekt zdarzenia przekazywany do funkcji obsluzFormularz, aby zapobiec domyślnej akcji.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="do_zamowienia.js.html">do_zamowienia.js</a>, <a href="do_zamowienia.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="pobierzLosowyCytat"><span class="type-signature"></span>pobierzLosowyCytat<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
@@ -376,7 +601,7 @@
 
 
 <div class="description">
-    Wywołuje asynchroniczne żądanie HTTP do API w celu pobrania losowego cytatui wyświetlenia go na stronie.
+    Wywołuje asynchroniczne żądanie HTTP do API w celu pobrania losowego cytatui wyświetlenia go na stronie. Wykorzystuje `fetch` do pobrania danych iobsługuje potencjalne błędy.
 </div>
 
 
@@ -420,7 +645,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="do_zamowienia.js.html">do_zamowienia.js</a>, <a href="do_zamowienia.js.html#line53">line 53</a>
+        <a href="opinie.js.html">opinie.js</a>, <a href="opinie.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -464,7 +689,7 @@
 
 
 <div class="description">
-    Wyświetla pobrany cytat w kontenerze na stronie.
+    Wyświetla pobrany cytat w kontenerze w nowym paragrafie na stronie "O nas".
 </div>
 
 
@@ -557,7 +782,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="do_zamowienia.js.html">do_zamowienia.js</a>, <a href="do_zamowienia.js.html#line66">line 66</a>
+        <a href="opinie.js.html">opinie.js</a>, <a href="opinie.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -592,98 +817,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Events</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="event:obsluzFormularz">obsluzFormularz</h4>
-    
-
-    
-
-
-
-<div class="description">
-    Obsługuje zdarzenie wysyłania formularza, zbierając dane z formularzai wyświetlając powiadomienie z imieniem użytkownika.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="do_zamowienia.js.html">do_zamowienia.js</a>, <a href="do_zamowienia.js.html#line17">line 17</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     
 </article>
 
@@ -695,13 +828,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="global.html#event:obsluzFormularz">obsluzFormularz</a></li></ul><h3>Global</h3><ul><li><a href="global.html#kliknij">kliknij</a></li><li><a href="global.html#kliknij2">kliknij2</a></li><li><a href="global.html#kliknij3">kliknij3</a></li><li><a href="global.html#pobierzLosowyCytat">pobierzLosowyCytat</a></li><li><a href="global.html#wyswietlCytat">wyswietlCytat</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#dodajZamowienieDoTabeli">dodajZamowienieDoTabeli</a></li><li><a href="global.html#kliknij">kliknij</a></li><li><a href="global.html#kliknij2">kliknij2</a></li><li><a href="global.html#kliknij3">kliknij3</a></li><li><a href="global.html#obsluzFormularz">obsluzFormularz</a></li><li><a href="global.html#pobierzLosowyCytat">pobierzLosowyCytat</a></li><li><a href="global.html#wyswietlCytat">wyswietlCytat</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sat Feb 03 2024 16:53:21 GMT+0100 (czas środkowoeuropejski standardowy)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Feb 05 2024 21:55:48 GMT+0100 (czas środkowoeuropejski standardowy)
 </footer>
 
 <script> prettyPrint(); </script>

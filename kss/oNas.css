@@ -99,6 +99,7 @@ nav {
                     et turpis. Sed luctus nec est eu tempor.
                 </p>
             </section>
+            <section>
             <div class="slider">
                 <div class="slide" id="slide1">
                     <img src="img/o_nas/slide1.jpg" alt="Chleb 1">
@@ -113,6 +114,10 @@ nav {
                     <img src="img/o_nas/slide4.jpg" alt="Chleb 4">
                 </div>
             </div>
+            </section>
+            <section>
+                <h2>Opinie klientów</h2>
+            </section>
         </div>
     </main>
 

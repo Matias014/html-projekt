@@ -97,6 +97,21 @@ nav {
                     <button type="submit">Zamów</button>
                 </form>
             </section>
+            <section>
+                <h2>Moje zamówienia</h2>
+                <table id="tabela-zamowien">
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Pieczywo</th>
+                            <th>Ilość</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
         </div>
     </main>
 
@@ -317,4 +332,14 @@ footer {
 
 #formularz-zamowienia button:hover {
     background-color: #b08a61;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    margin: auto;
+    text-align: center;
 }

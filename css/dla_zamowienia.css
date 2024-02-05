@@ -48,3 +48,13 @@
 #formularz-zamowienia button:hover {
     background-color: #b08a61;
 }
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+}

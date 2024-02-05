@@ -447,3 +447,13 @@ footer {
         display: block;
     }
 }
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+}
