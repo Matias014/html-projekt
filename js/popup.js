@@ -1,14 +1,14 @@
 /** Funkcja kliknij służy do wyświetlenia komunikatu */
 function kliknij() {
-    alert("Świeży i chrupiący chleb!");
+    alert("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 }
 
 /** Funkcja kliknij2 służy do wyświetlenia komunikatu */
 function kliknij2() {
-    alert("Najlepszy chleb!");
+    alert("Donec aliquam pharetra libero sed vulputate.");
 }
 
 /** Funkcja kliknij3 służy do wyświetlenia komunikatu */
 function kliknij3() {
-    alert("Najtańszy chleb!");
+    alert("Vivamus vehicula massa magna, at blandit nibh molestie nec.");
 }

@@ -13,6 +13,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/bread_web_icon.png">
     <script src="js/burger.js"></script>
     <script src="js/do_zamowienia.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +48,7 @@
         <div class="container">
             <section>
                 <h2>Składanie zamówienia</h2>
-                <form action="#" id="formularz-zamowienia">
+                <form id="formularz-zamowienia">
                     <label for="imie">Imię:</label>
                     <input type="text" id="imie" name="imie" required autofocus pattern="[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+"
                         title="Wpisz poprawne imię.">
@@ -109,6 +120,22 @@
 
                     <button type="submit">Zamów</button>
                 </form>
+            </section>
+            <section>
+                <h2>Moje zamówienia</h2>
+                <table id="tabela-zamowien">
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Pieczywo</th>
+                            <th>Ilość</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </section>
         </div>
     </main>

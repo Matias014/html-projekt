@@ -1,3 +1,6 @@
+let tablicaZamowien = [];
+let i = 0;
+
 /**
  * Główna funkcja inicjująca działanie skryptu po załadowaniu całego dokumentu.
  * Dodaje nasłuchiwacze zdarzeń do formularza oraz przycisku menu burger.
@@ -5,8 +8,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById("formularz-zamowienia");
     form.addEventListener("submit", obsluzFormularz);
-
-    pobierzLosowyCytat();
 });
 
 /**
@@ -14,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
  * i wyświetlając powiadomienie z imieniem użytkownika.
  * @event
  */
-function obsluzFormularz() {
+function obsluzFormularz(e) {
+    e.preventDefault();
+
     const imie = document.getElementById("imie").value;
     const nazwisko = document.getElementById("nazwisko").value;
     const email = document.getElementById("email").value;
@@ -27,8 +30,6 @@ function obsluzFormularz() {
     const ilosc = document.getElementById("ilosc").value;
     const maka = document.querySelector("input[name='maka']:checked").value;
 
-
-    //json
     const zamowienie = {
         "imie": imie,
         "nazwisko": nazwisko,
@@ -43,31 +44,26 @@ function obsluzFormularz() {
         "maka": maka
     };
 
+    tablicaZamowien.push(zamowienie);
+
+    dodajZamowienieDoTabeli();
+
     alert("Dziękujemy za złożenie zamówienia, " + zamowienie.imie + "!");
 }
 
-/**
- * Wywołuje asynchroniczne żądanie HTTP do API w celu pobrania losowego cytatu
- * i wyświetlenia go na stronie.
- */
-function pobierzLosowyCytat() {
-    fetch('https://api.quotable.io/random')
-        .then(response => response.json())
-        .then(data => {
-            wyswietlCytat(data.content);
-        })
-        .catch(error => console.error('Error:', error));
-}
+function dodajZamowienieDoTabeli() {
+    const tabela = document.getElementById("tabela-zamowien").getElementsByTagName('tbody')[0];
 
-/**
- * Wyświetla pobrany cytat w kontenerze na stronie.
- * @param {string} cytat - Tekst cytatu do wyświetlenia.
- */
-function wyswietlCytat(cytat) {
-    const container = document.querySelector('.container');
+    const wiersz = tabela.insertRow();
+    const imieKomorka = wiersz.insertCell(0);
+    const nazwiskoKomorka = wiersz.insertCell(1);
+    const pieczywoKomorka = wiersz.insertCell(2);
+    const iloscKomorka = wiersz.insertCell(3);
 
-    const cytatParagraf = document.createElement('p');
-    cytatParagraf.textContent = cytat;
-
-    container.appendChild(cytatParagraf);
+    imieKomorka.innerHTML = tablicaZamowien[i].imie;
+    nazwiskoKomorka.innerHTML = tablicaZamowien[i].nazwisko;
+    pieczywoKomorka.innerHTML = tablicaZamowien[i].pieczywo;
+    iloscKomorka.innerHTML = tablicaZamowien[i].ilosc;
+    
+    i++;
 }

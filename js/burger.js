@@ -18,4 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerMenu.addEventListener('click', function () {
         linki.classList.toggle('active');
     });
+
+    window.addEventListener('resize', function () {
+        // Sprawdza, czy szerokość okna jest większa niż 712px i czy burger-menu jest włączone.
+        // Jeżeli oba warunki są spełnione, to wyłacza burger-menu, żeby po ponownym włączeniu widoku mobilnego menu nie było otwarte
+        if (window.innerWidth > 712 && linki.classList.contains('active')) {
+            linki.classList.remove('active');
+        }
+    });
 });
