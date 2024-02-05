@@ -1,5 +1,5 @@
-let tablicaZamowien = [];
-let i = 0;
+let tablicaZamowien = []; //do przechowania zamówień
+let i = 0; //do iteracji
 
 /**
  * Główna funkcja inicjująca działanie skryptu po załadowaniu całego dokumentu.
